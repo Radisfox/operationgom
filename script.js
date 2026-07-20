@@ -129,7 +129,7 @@ function checkAnswer3() {
     
     answer = answer.replace(/\s+/g, " ");
     
-    if (answer === correct) {
+    if (answer.startsWith("men, their rights and nothing more")) {
 
         document.getElementById("info").innerHTML = `
 
@@ -224,7 +224,7 @@ function checkAnswer4() {
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
-    if (answer === correct) {
+    if (answer.startsWith("maybe")) {
 
     document.getElementById("info").innerHTML = `
 
