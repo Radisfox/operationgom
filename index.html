@@ -1,142 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operation GOM</title>
 
-    <title>Operation GOM</title>
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="background"></div>
-
 <div class="container">
 
-    <header>
+<h1>OPERATION GOM</h1>
 
-        <h2>OPERATION GOM</h2>
+<p class="subtitle">
+Archives historiques du 20 juillet
+</p>
 
-        <h1>Archives du 20 Juillet</h1>
+<!-- LOGIN -->
 
-        <p class="subtitle">
-            Base de données historique confidentielle
-        </p>
+<div id="login">
 
-    </header>
+<label>Nom</label>
 
-    <!-- LOGIN -->
+<input id="name" type="text">
 
-    <section id="loginScreen">
+<button onclick="login()">
+ACCÉDER
+</button>
 
-        <label>Nom d'utilisateur</label>
+</div>
 
-        <input
-            id="username"
-            type="text"
-            placeholder="Entrez votre prénom">
+<!-- ARCHIVE -->
 
-        <button onclick="login()">
-            ACCÉDER
-        </button>
+<div id="archive" style="display:none;">
 
-    </section>
+<h2>ARCHIVE 1</h2>
 
-    <!-- ARCHIVE -->
+<p>
 
-    <section id="archiveScreen" class="hidden">
+Pour accéder au dossier, identifiez le titre de cette partition.
 
-        <div class="progress">
+</p>
 
-            <div class="progressText">
-                Archives déverrouillées
-            </div>
+<img
+src="images/archive1.png"
+class="music">
 
-            <div class="progressBar">
+<input
+id="answer"
+type="text"
+placeholder="Votre réponse">
 
-                <div id="progressFill"></div>
+<button onclick="checkAnswer()">
 
-            </div>
+VALIDER
 
-            <div id="progressNumber">
-                1 / 5
-            </div>
+</button>
 
-        </div>
+<p id="error"></p>
 
-        <hr>
+</div>
 
-        <h2 id="archiveTitle"></h2>
+<!-- INFO -->
 
-        <h3 id="archiveDate"></h3>
+<div id="info" style="display:none;">
 
-        <p id="archiveText"></p>
+<h2>
 
-        <img
-            id="archiveImage"
-            src=""
-            alt="Indice">
+Le décès de Paul Valéry
 
-        <div class="hintBox">
+</h2>
 
-            <button onclick="showHint()">
+<h3>
 
-                💡 Besoin d'un indice ?
+20 juillet 1945
 
-            </button>
+</h3>
 
-            <p id="hint"></p>
+<p>
 
-        </div>
+Paul Valéry (1871–1945) est l'un des plus grands poètes et penseurs français du XXᵉ siècle. Né à Sète, il s'est distingué par une poésie raffinée mêlant réflexion philosophique et recherche de la perfection du langage. Parmi ses œuvres les plus célèbres figurent Le Cimetière marin et La Jeune Parque. Élu à l'Académie française en 1925, il demeure une figure majeure de la littérature française.
 
-        <label>
-
-            Clé d'accès suivante
-
-        </label>
-
-        <input
-            id="nextKey"
-            type="text"
-            placeholder="Entrer la réponse">
-
-        <button onclick="nextArchive()">
-
-            VALIDER
-
-        </button>
-
-    </section>
-
-    <!-- FINAL PAGE -->
-
-    <section id="finalScreen" class="hidden">
-
-        <h2>
-
-            ❤️ Félicitations ❤️
-
-        </h2>
-
-        <p id="finalLetter">
-
-            Ton texte apparaîtra ici.
-
-        </p>
-
-    </section>
-
-    <p id="message"></p>
+</p>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
