@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operation Gom</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            background:#111;
-            color:white;
-            font-family:Arial, sans-serif;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            margin:0;
-            text-align:center;
-        }
+<title>Operation GOM</title>
 
-        .card{
-            max-width:700px;
-            padding:40px;
-            border:2px solid white;
-            border-radius:15px;
-        }
+<link rel="stylesheet" href="style.css">
 
-        h1{
-            font-size:3em;
-            letter-spacing:3px;
-        }
-
-        button{
-            margin-top:30px;
-            padding:15px 35px;
-            font-size:18px;
-            cursor:pointer;
-            border:none;
-            border-radius:8px;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-<h1>OPERATION GOM</h1>
+<h3>ARCHIVES CLASSIFIÉES</h3>
 
-<h2>CLASSIFIED</h2>
+<h1>20 JUILLET</h1>
 
-<p>
-Access restricted.
+<p class="subtitle">
+Base de données historique confidentielle
 </p>
 
-<p>
-Only authorized agents may continue.
-</p>
+<div id="login">
 
-<button onclick="location.href='mission.html'">
-Begin Mission
+<label>Nom d'utilisateur</label>
+
+<input
+id="username"
+type="text"
+placeholder="Entrer votre prénom">
+
+<button onclick="login()">
+ACCÉDER
 </button>
 
 </div>
+
+<div id="secondLogin" style="display:none;">
+
+<p class="success">
+✓ Utilisateur reconnu
+</p>
+
+<p>
+Bienvenue, <span id="name"></span>.
+</p>
+
+<p>
+Une authentification secondaire est requise.
+</p>
+
+<label>Clé d'accès</label>
+
+<input
+id="key"
+type="text"
+placeholder="Entrer la clé">
+
+<button onclick="checkKey()">
+DÉVERROUILLER
+</button>
+
+</div>
+
+<p id="message"></p>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
