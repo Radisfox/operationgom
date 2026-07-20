@@ -57,7 +57,7 @@ function checkAnswer2() {
 
     if (answer === correct) {
 
-        document.getElementById("info").innerHTML = `
+        document.getElementById("archive2").innerHTML = `
 
 <h2>Dia de los Amigos</h2>
 
