@@ -3,7 +3,7 @@ const archives=[
 title:"Le décès de Paul Valéry",
 date:"20 juillet 1945",
 text:"Paul Valéry (1871–1945) est l'un des plus grands poètes et penseurs français du XXᵉ siècle. Né à Sète, il s'est distingué par une poésie raffinée, mêlant réflexion philosophique et recherche de la perfection du langage. Parmi ses œuvres les plus célèbres figurent Le Cimetière marin et La Jeune Parque. Élu à l'Académie française en 1925, il a marqué la littérature par son intelligence, sa sensibilité et son style unique. Son œuvre continue d'inspirer les amoureux de la poésie et de la pensée.",
-image:"images/archive1.jpg",
+image:"images/archive1.png",
 answer:"a nos souvenirs",
 hints:["Le mot de passe est le titre de cette musique."]
 },
