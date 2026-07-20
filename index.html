@@ -1,75 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Operation GOM</title>
+    <title>Operation GOM</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<div class="background"></div>
+
 <div class="container">
 
-<h3>ARCHIVES CLASSIFIÉES</h3>
+    <header>
 
-<h1>20 JUILLET</h1>
+        <h2>OPERATION GOM</h2>
 
-<p class="subtitle">
-Base de données historique confidentielle
-</p>
+        <h1>Archives du 20 Juillet</h1>
 
-<div id="login">
+        <p class="subtitle">
+            Base de données historique confidentielle
+        </p>
 
-<label>Nom d'utilisateur</label>
+    </header>
 
-<input
-id="username"
-type="text"
-placeholder="Entrer votre prénom">
+    <!-- LOGIN -->
 
-<button onclick="login()">
-ACCÉDER
-</button>
+    <section id="loginScreen">
 
-</div>
+        <label>Nom d'utilisateur</label>
 
-<div id="secondLogin" style="display:none;">
+        <input
+            id="username"
+            type="text"
+            placeholder="Entrez votre prénom">
 
-<p class="success">
-✓ Utilisateur reconnu
-</p>
+        <button onclick="login()">
+            ACCÉDER
+        </button>
 
-<p>
-Bienvenue, <span id="name"></span>.
-</p>
+    </section>
 
-<p>
-Une authentification secondaire est requise.
-</p>
+    <!-- SECOND LOGIN -->
 
-<label>Clé d'accès</label>
+    <section id="keyScreen" class="hidden">
 
-<input
-id="key"
-type="text"
-placeholder="Entrer la clé">
+        <p class="success">
+            ✓ Utilisateur reconnu
+        </p>
 
-<button onclick="checkKey()">
-DÉVERROUILLER
-</button>
+        <p>
+            Bienvenue <strong>Margaux</strong>.
+        </p>
 
-</div>
+        <p>
+            Une authentification secondaire est nécessaire pour consulter les archives.
+        </p>
 
-<p id="message"></p>
+        <label>Clé d'accès</label>
+
+        <input
+            id="accessKey"
+            type="text"
+            placeholder="Entrer la clé">
+
+        <button onclick="checkKey()">
+            DÉVERROUILLER
+        </button>
+
+    </section>
+
+    <!-- ARCHIVE -->
+
+    <section id="archiveScreen" class="hidden">
+
+        <div class="progress">
+
+            <div class="progressText">
+                Archives déverrouillées
+            </div>
+
+            <div class="progressBar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+            <div id="progressNumber">
+                1 / 5
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h2 id="archiveTitle"></h2>
+
+        <h3 id="archiveDate"></h3>
+
+        <p id="archiveText"></p>
+
+        <img
+            id="archiveImage"
+            src=""
+            alt="Indice">
+
+        <div class="hintBox">
+
+            <button onclick="showHint()">
+
+                💡 Besoin d'un indice ?
+
+            </button>
+
+            <p id="hint"></p>
+
+        </div>
+
+        <label>
+
+            Clé d'accès suivante
+
+        </label>
+
+        <input
+            id="nextKey"
+            type="text"
+            placeholder="Entrer la réponse">
+
+        <button onclick="nextArchive()">
+
+            VALIDER
+
+        </button>
+
+    </section>
+
+    <!-- FINAL PAGE -->
+
+    <section id="finalScreen" class="hidden">
+
+        <h2>
+
+            ❤️ Félicitations ❤️
+
+        </h2>
+
+        <p id="finalLetter">
+
+            Ton texte apparaîtra ici.
+
+        </p>
+
+    </section>
+
+    <p id="message"></p>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
