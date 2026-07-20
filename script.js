@@ -47,7 +47,7 @@ function checkAnswer2() {
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
-    let correct = "men, their rights and nothing more. women, their rights and nothing less."
+    let correct = "dia de los amigos"
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
