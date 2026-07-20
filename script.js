@@ -51,14 +51,6 @@ function login()function login(){
     }
 
 }
-function checkKey(){
- let k=accessKey.value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
- if(k=="operationgom"){
-   keyScreen.classList.add("hidden");
-   archiveScreen.classList.remove("hidden");
-   loadArchive();
- }else message.textContent="Clé d'accès invalide.";
-}
 function loadArchive(){
  let a=archives[current];
  archiveTitle.textContent=a.title;
