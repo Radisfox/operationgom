@@ -52,6 +52,9 @@ function checkAnswer2() {
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
+    alert(answer);
+    alert(correct);
+
     if (answer === correct) {
 
         document.getElementById("info").innerHTML = `
