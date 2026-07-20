@@ -13,11 +13,43 @@ hints:["Le mot de passe est le titre de cette musique."]
 {title:"Archive 5",date:"",text:"À compléter",image:"",answer:"test5",hints:[""]}
 ];
 let current=0,h=0;
-function login(){
- if(document.getElementById("username").value.trim().toLowerCase()=="margaux"){
-  loginScreen.classList.add("hidden");
-  keyScreen.classList.remove("hidden");
- }else message.textContent="Utilisateur inconnu.";
+function login()function login(){
+
+    const username = document
+        .getElementById("username")
+        .value
+        .trim()
+        .toLowerCase();
+
+    if(username === "margaux"){
+
+        document
+            .getElementById("loginScreen")
+            .classList
+            .add("hidden");
+
+        document
+            .getElementById("archiveScreen")
+            .classList
+            .remove("hidden");
+
+        loadArchive();
+
+        document
+            .getElementById("message")
+            .textContent = "";
+
+    }
+
+    else{
+
+        document
+            .getElementById("message")
+            .textContent =
+            "Utilisateur inconnu.";
+
+    }
+
 }
 function checkKey(){
  let k=accessKey.value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
